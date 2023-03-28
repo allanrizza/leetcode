@@ -1,8 +1,5 @@
 package mergetwosortedlists;
 
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
     public ListNode mergeTwoLists(ListNode node1, ListNode node2) {
         ListNode listResult = new ListNode(-1);
