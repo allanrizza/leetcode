@@ -5,23 +5,22 @@ import java.util.List;
 
 class Solution {
     public ListNode mergeTwoLists(ListNode node1, ListNode node2) {
-        ListNode mergedList = new ListNode(-1);
-        ListNode current = mergedList;
+        ListNode listResult = new ListNode(-1);
+        ListNode curr = listResult;
 
-        while (node1 != null && node2 != null) {
+        while(node1 != null && node2 != null) {
             if(node1.val < node2.val) {
-                current.next = node1;
+                curr.next = node1;
                 node1 = node1.next;
             } else {
-                current.next = node2;
+                curr.next = node2;
                 node2 = node2.next;
             }
-            current = current.next;
+            curr = curr.next;
         }
 
-        if(node1 == null) current.next = node2;
-        if(node2 == null) current.next = node1;
+        curr.next = node1 == null ? node2 : node1;
 
-        return mergedList.next;
-    }
+        return listResult.next;
+    } 
 }
