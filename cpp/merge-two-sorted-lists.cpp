@@ -2,17 +2,6 @@
 
 using namespace std;
 
-
-
-int main() {
-
-    
-
-    
-
-    return 0;
-}
-
 class Solution {
 public:
     struct ListNode {
